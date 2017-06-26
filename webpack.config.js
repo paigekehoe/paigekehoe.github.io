@@ -1,22 +1,24 @@
-// webpack.config.js
-if(process.env.NODE_ENV === 'development'){
-  var loaders = ['react-hot','babel']
-} else {
-  var loaders = ['babel']
-}
+const webpack = require('webpack');
+
 module.exports = {
-  devtool: 'eval',
-  entry: './app-client.js',
+  entry: `${__dirname}/src/index.js`,
   output: {
-    path: __dirname + '/public/dist',
+    path: `${__dirname}/build`,
+    publicPath: '/build/',
     filename: 'bundle.js',
-    publicPath: '/dist/'
   },
+
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: loaders,
-      exclude: /node_modules/
-    }]
-  }
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+    ],
+  },
+
+  plugins: process.argv.indexOf('-p') === -1 ? [] : [
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false,
+      },
+    }),
+  ],
 };
