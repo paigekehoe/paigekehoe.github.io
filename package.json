@@ -1,22 +1,23 @@
 {
-  "name": "spa-github-pages",
-  "version": "5.0.0",
+  "name": "paige-kehoe",
+  "version": "1.0.0",
   "private": true,
-  "description": "Single Page Apps for GitHub Pages",
+  "description": "Paige's WebPage",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/paigekehoe/paigekehoe.github.io"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Paige Kehoe",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.6.1",
     "react-interactive": "^0.6.5",
     "react-router-dom": "^4.1.1"
   },
