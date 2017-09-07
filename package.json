@@ -1,0 +1,11 @@
+{
+  "name": "paige-kehoe",
+  "author": "Pkehoe",
+  "description": "A personal website for Paige Kehoe",
+  "license": "MIT",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.10"
+  }
+}
